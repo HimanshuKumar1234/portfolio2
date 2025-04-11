@@ -1,0 +1,223 @@
+/* HomePage.css */
+
+/* Home Section Wrapper */
+.homeClass {
+  font-family: sans-serif;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Video Container */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Video Tag Styling */
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Optional Dark Overlay */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Hero Content on top of video */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+
+/* Glass Card Design */
+.glass-card {
+  
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  width: 220px;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 12px rgba(255, 193, 7, 0.15);
+  position: relative;
+  overflow: hidden;
+
+  /* updated */
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  border: 1.5px solid #ffc107;
+  box-shadow: 0 0 25px #ffc107aa;
+  background: rgba(255, 193, 7, 0.08);
+}
+
+.card-icon {
+  color: #ffc107;
+  transition: transform 0.4s ease;
+}
+
+.glass-card:hover .card-icon {
+  transform: rotate(10deg) scale(1.2);
+}
+
+/* Scrolling Logos (Marquee Effect) */
+.logos {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: transparent;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.scroll-slide {
+  display: flex;
+  animation: scroll-left 20s linear infinite;
+}
+
+.scroll-slide span {
+  display: inline-block;
+  margin: 0 5rem;
+  font-size: 5rem;
+  font-weight: 600;
+  color: #c084fc;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+
+
+.scroll-slide span:hover {
+  transform: scale(1.3);
+  color: yellow;
+}
+
+/* Scrolling Animation Keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* for responsiveness */
+
+/* Responsive Font Sizes */
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  padding: 0 1rem;
+}
+
+/* Responsive Glass Cards */
+@media (max-width: 992px) {
+  .glass-card {
+    width: 180px;
+    padding: 1.5rem 1rem;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+  }
+
+  .scroll-slide span {
+    font-size: 2.5rem;
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+
+  .glass-card {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .logos {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .scroll-slide span {
+    font-size: 2rem;
+    margin: 0 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .glass-card {
+    padding: 1rem;
+  }
+
+  .scroll-slide span {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+  }
+
+  .bg-video {
+    object-position: center;
+  }
+}
+
+
+/* NEW: Wrap for both scroll-slide*/
+.scrolling-wrapper {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+.scroll-slide {
+  display: flex;
+  animation: none;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+} 

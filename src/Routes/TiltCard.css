@@ -1,0 +1,100 @@
+.achievement-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.tiltClass {
+  font-family: sans-serif;
+  font-weight: 600;
+  width: 100%;
+  max-width: 340px;
+}
+
+.tilt-card {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1.2;
+  perspective: 1500px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+
+.tilt-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.tilt-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.caption-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  transform: translateZ(40px);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .tiltClass {
+    max-width: 100%;
+  }
+
+  .tilt-card {
+    height: auto;
+    aspect-ratio: 1 / 1.2;
+  }
+
+  .caption-overlay {
+    font-size: 0.95rem;
+  }
+
+  .textSection {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .textSection {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .caption-overlay {
+    font-size: 0.85rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}

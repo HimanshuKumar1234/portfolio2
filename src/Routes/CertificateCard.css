@@ -1,0 +1,71 @@
+.certificate-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 40%, rgba(0, 255, 0, 0.15), transparent 40%),
+              radial-gradient(circle at 80% 60%, rgba(255, 255, 0, 0.15), transparent 50%);
+  overflow: hidden;
+  z-index: 2;
+
+}
+
+.certificate-title{
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  
+}
+
+.infinite-scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* Apply animation only when not hovered */
+.infinite-scroll-track {
+  display: flex;
+  width: fit-content;
+  animation: scrollInfinite 11s linear infinite;
+  gap: 2rem;
+}
+
+/* Pause animation when hovering the entire wrapper */
+.infinite-scroll-wrapper:hover .infinite-scroll-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollInfinite {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.certificate-card {
+  flex: 0 0 calc(33.33% - 2rem); /* 3 cards max + gap */
+  background: #111;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 255, 100, 0.2);
+  color: white;
+  height: 50vh; /* Half of screen height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Or "contain" if you prefer seeing the whole image */
+  border-radius: 12px; /* Optional: makes the image edges smooth */
+}
+
+
+.certificate-card:hover {
+  transform: scale(1.05);
+}

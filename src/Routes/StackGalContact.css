@@ -1,0 +1,77 @@
+.terminal-intro {
+  background-color: #000;
+  color: #00ff88;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 60px;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.terminal-intro p {
+  margin: 0.5rem 0;
+}
+
+.highlight {
+  color: #39ff14;
+  font-weight: bold;
+}
+
+.connected {
+  color: #00ffff;
+}
+
+
+
+.gallery {
+  position: relative;
+  width: 45%;
+  height: 45px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.gallery img {
+  position: absolute;
+  width: 45px; /* much smaller */
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.7s ease, z-index 0.3s;
+  cursor: pointer;
+}
+
+.img-1 { transform: rotate(-8deg) translateX(-30px); z-index: 1; }
+.img-2 { transform: rotate(-4deg) translateX(-15px); z-index: 2; }
+.img-3 { transform: rotate(0deg); z-index: 3; }
+.img-4 { transform: rotate(4deg) translateX(15px); z-index: 2; }
+.img-5 { transform: rotate(8deg) translateX(30px); z-index: 1; }
+
+
+/* Scattered look — BIGGER spread */
+.gallery:hover .img-1 {
+  transform: translate(-350px, -180px) rotate(-25deg);
+}
+.gallery:hover .img-2 {
+  transform: translate(-180px, 200px) rotate(-10deg);
+}
+.gallery:hover .img-3 {
+  transform: translate(0px, -60px) rotate(0deg);
+}
+.gallery:hover .img-4 {
+  transform: translate(180px, 220px) rotate(12deg);
+}
+.gallery:hover .img-5 {
+  transform: translate(350px, -170px) rotate(25deg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

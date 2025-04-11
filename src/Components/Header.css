@@ -1,0 +1,189 @@
+/* Header.css */
+
+/* Base background with glass effect */
+.headerC {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: large;
+  position: relative;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Text styling */
+.navbar, .nav-link, .nav-button {
+  color: #f1f1f1 !important;
+}
+
+.nav-button {
+  position: relative;
+  margin: 0 8px;
+  padding: 8px 20px !important;
+  border: 2px solid #9c27b0;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #fff !important;
+  background-color: transparent;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.nav-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #9c27b0, #673ab7);
+  transition: all 0.4s ease-out;
+  z-index: -1;
+}
+
+.nav-button:hover {
+  color: white !important;
+  border-color: transparent;
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(156, 39, 176, 0.5);
+}
+
+.nav-button:hover::before {
+  width: 100%;
+}
+
+/* Logo animation */
+.nav-logo {
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* External Links - Style Upgrade */
+.external-link {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  padding: 8px 16px !important;
+  color: #fff !important;
+}
+
+.external-link.github {
+  background: linear-gradient(135deg, #0d6efd, #673ab7);
+  color: #fff;
+}
+
+.external-link.github:hover {
+  background: linear-gradient(135deg, #0a58ca, #512da8);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.5);
+}
+
+.external-link.leetcode {
+  background: #ffa116;
+  color: #fff;
+}
+
+.external-link.leetcode:hover {
+  transform: translateY(-3px) scale(1.05);
+  filter: brightness(1.2);
+}
+
+.external-link img {
+  transition: transform 0.3s ease;
+}
+
+.external-link:hover img {
+  transform: scale(1.15);
+}
+
+/* Banner Gradient Animation (if used) */
+.banner-gradient {
+  background: linear-gradient(-45deg, #ff416c, #ff4b2b, #1e3c72, #2a5298);
+  background-size: 400% 400%;
+  height: 120px;
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Collapse Toggle (Hamburger) Styling */
+.toggle-icon {
+  outline: none;
+  border: none;
+}
+
+/* Adjust profile image size for smaller devices */
+@media (max-width: 768px) {
+  .profile-img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .nav-button {
+    margin: 6px auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+  }
+
+  .external-link {
+    margin: 6px auto;
+    display: inline-block;
+    width: 80%;
+    text-align: center;
+  }
+}
+
+.toggle-icon .navbar-toggler-icon {
+  background-image: none;
+  width: 1.8rem;
+  height: 1.5rem;
+  position: relative;
+  display: block;
+}
+
+.toggle-icon .navbar-toggler-icon::before,
+.toggle-icon .navbar-toggler-icon::after,
+.toggle-icon .navbar-toggler-icon div {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #ff9a00, #ff2050, #9e00ff);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Top line */
+.toggle-icon .navbar-toggler-icon::before {
+  top: 0;
+}
+
+/* Middle line */
+.toggle-icon .navbar-toggler-icon div {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Bottom line */
+.toggle-icon .navbar-toggler-icon::after {
+  bottom: 0;
+}
