@@ -20,10 +20,6 @@ const Achievements = () => {
       imageSrc: "/assets/UnstopDirectorBadge-V4wgBVQp.jpg",
       caption: "Coding Club Core Member",
     },
-    {
-      imageSrc: "/assets/UnstopDirectorBadge-V4wgBVQp.jpg",
-      caption: "Coding Club Core Member",
-    },
   ];
 
   return (
