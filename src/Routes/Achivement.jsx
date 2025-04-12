@@ -16,10 +16,6 @@ const Achievements = () => {
       imageSrc: "/Startup.png",
       caption: "Innovation Excellence Award",
     },
-    {
-      imageSrc: "/assets/UnstopDirectorBadge-V4wgBVQp.jpg",
-      caption: "Coding Club Core Member",
-    },
   ];
 
   return (
