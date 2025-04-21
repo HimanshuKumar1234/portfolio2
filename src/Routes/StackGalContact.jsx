@@ -3,10 +3,10 @@ import './StackGalContact.css'; // Use this for CSS styling
 
 const images = [
   '/Contact3.png',
-  '/Contact2.png',
-  '/Contact.png',
   '/Contact4.png',
-  '/Contact5.png'
+  '/Contact.png',
+  '/Contact5.png',
+  '/Contact2.png'
 ];
 
 const StackedGallery = () => {

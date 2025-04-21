@@ -17,6 +17,10 @@
   width: 100%;
   z-index: 0;
   overflow: hidden;
+
+  background-image: url('/Bgimage.png');
+  background-size: cover;
+  background-position: center;
 }
 
 /* Video Tag Styling */
