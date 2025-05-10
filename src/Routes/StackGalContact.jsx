@@ -17,11 +17,11 @@ const StackedGallery = () => {
       <p>&gt; <span className="connected">Connection established.</span> Awaiting your message...</p>
     </div>
     
-    <div className="gallery">
+    {/* <div className="gallery">
       {images.map((src, index) => (
         <img key={index} src={src} alt={`img-${index}`} className={`img img-${index + 1}`} />
       ))}
-    </div>
+    </div> */}
     </>
   );
 };

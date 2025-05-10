@@ -11,22 +11,22 @@ const ProjectPage = () => {
       imageSrc: "/MyStationary.png",
       caption: "Project : My Stationary ",
       githubUrl: "https://github.com/HimanshuKumar1234",
-      liveUrl:"https://simons-game08.netlify.app/",
+      liveUrl:"https://project-mern-frontend.onrender.com/",
       details: "All-in-One Online Store – A seamless platform for gifts, stationery, and more! Users can browse, purchase, and track orders with ease."
     },
     {
-      imageSrc: "/SimonGame.png",
-      caption: "Project : SimonsGamet",
-      githubUrl: "https://github.com/HimanshuKumar1234",
-      liveUrl:"https://simons-game08.netlify.app/",
-      details:"Simon Game – A fun and interactive memory challenge! Built to test users' pattern recognition with increasing difficulty."
+      imageSrc: "/AlgoViz.png",
+      caption: "Project : Algorithm Viualizer",
+      githubUrl: "https://github.com/HimanshuKumar1234/Algo-Vizualizer",
+      liveUrl:"https://algo-vizualizer-six.vercel.app/",
+      details:"AlgoViz – An interactive algorithm visualizer! Built to simplify DSA concepts by animating step-by-step execution of popular algorithms."
     },
     {
-      imageSrc: "/MyStationary.png",
-      caption: "Innovation Excellence Award",
-      githubUrl: "https://github.com/HimanshuKumar1234",
-      liveUrl:"https://simons-game08.netlify.app/",
-      details:"Simon Game – A fun and interactive memory challenge! Built to test users' pattern recognition with increasing difficulty."
+      imageSrc: "/PortFolio.png",
+      caption: "Project : My PortFolio",
+      githubUrl: "https://github.com/HimanshuKumar1234/portfolio2",
+      liveUrl:"https://himanshuportfolio-three.vercel.app/",
+      details:"Portfolio – A personal developer portfolio! Built to showcase projects, skills, and experiences with a clean and responsive design."
     },
   ];
 
