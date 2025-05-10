@@ -5,32 +5,31 @@
               radial-gradient(circle at 80% 60%, rgba(255, 255, 0, 0.15), transparent 50%);
   overflow: hidden;
   z-index: 2;
-
+  padding: 1rem;
 }
 
-.certificate-title{
+.certificate-title {
   text-align: center;
-  margin-top: 80px;
-  margin-bottom: 80px;
-  
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-size: 2rem;
+  color: #fff;
 }
 
 .infinite-scroll-wrapper {
   overflow: hidden;
   width: 100%;
   position: relative;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
-/* Apply animation only when not hovered */
 .infinite-scroll-track {
   display: flex;
   width: fit-content;
   animation: scrollInfinite 11s linear infinite;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
-/* Pause animation when hovering the entire wrapper */
 .infinite-scroll-wrapper:hover .infinite-scroll-track {
   animation-play-state: paused;
 }
@@ -45,12 +44,12 @@
 }
 
 .certificate-card {
-  flex: 0 0 calc(33.33% - 2rem); /* 3 cards max + gap */
+  flex: 0 0 calc(16.16% - 2rem); /* Default for desktop: approx 3 cards */
   background: #111;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 255, 100, 0.2);
   color: white;
-  height: 50vh; /* Half of screen height */
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,11 +60,40 @@
 .certificate-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Or "contain" if you prefer seeing the whole image */
-  border-radius: 12px; /* Optional: makes the image edges smooth */
+  object-fit: cover;
+  border-radius: 12px;
 }
-
 
 .certificate-card:hover {
   transform: scale(1.05);
+}
+
+/* Medium screens (tablet) */
+@media (max-width: 768px) {
+  .certificate-card {
+    flex: 0 0 45%;  /* Smaller width on tablets */
+    height: 40vh;
+  }
+
+  .certificate-title {
+    font-size: 1.7rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .infinite-scroll-track {
+    gap: 1rem;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+  .certificate-card {
+    flex: 0 0 60%;  /* Slimmer card width on mobile */
+    height: 35vh;
+  }
+
+  .certificate-title {
+    font-size: 1.4rem;
+  }
 }
