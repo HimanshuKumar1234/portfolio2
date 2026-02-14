@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a15"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg2)"/>
+  <!-- Sorting bars -->
+  <rect x="100" y="500" width="40" height="200" rx="4" fill="#00F0FF" opacity="0.9"/>
+  <rect x="160" y="400" width="40" height="300" rx="4" fill="#00d4e0" opacity="0.8"/>
+  <rect x="220" y="300" width="40" height="400" rx="4" fill="#00b8cc" opacity="0.7"/>
+  <rect x="280" y="350" width="40" height="350" rx="4" fill="#7A5CFF" opacity="0.8"/>
+  <rect x="340" y="250" width="40" height="450" rx="4" fill="#6b4ce0" opacity="0.7"/>
+  <rect x="400" y="200" width="40" height="500" rx="4" fill="#5c3dc0" opacity="0.6"/>
+  <rect x="460" y="150" width="40" height="550" rx="4" fill="#00F0FF" opacity="0.5"/>
+  <rect x="520" y="450" width="40" height="250" rx="4" fill="#7A5CFF" opacity="0.6"/>
+  <rect x="580" y="350" width="40" height="350" rx="4" fill="#00F0FF" opacity="0.7"/>
+  <rect x="640" y="280" width="40" height="420" rx="4" fill="#00d4e0" opacity="0.8"/>
+  <!-- Graph nodes -->
+  <circle cx="850" cy="200" r="25" fill="none" stroke="#00F0FF" stroke-width="2" opacity="0.6"/>
+  <circle cx="950" cy="300" r="25" fill="none" stroke="#7A5CFF" stroke-width="2" opacity="0.6"/>
+  <circle cx="1050" cy="200" r="25" fill="none" stroke="#00F0FF" stroke-width="2" opacity="0.6"/>
+  <circle cx="850" cy="400" r="25" fill="none" stroke="#7A5CFF" stroke-width="2" opacity="0.6"/>
+  <circle cx="1050" cy="400" r="25" fill="none" stroke="#00F0FF" stroke-width="2" opacity="0.6"/>
+  <line x1="850" y1="200" x2="950" y2="300" stroke="#00F0FF" stroke-width="1" opacity="0.3"/>
+  <line x1="950" y1="300" x2="1050" y2="200" stroke="#7A5CFF" stroke-width="1" opacity="0.3"/>
+  <line x1="850" y1="400" x2="950" y2="300" stroke="#00F0FF" stroke-width="1" opacity="0.3"/>
+  <line x1="1050" y1="400" x2="950" y2="300" stroke="#7A5CFF" stroke-width="1" opacity="0.3"/>
+  <line x1="850" y1="200" x2="850" y2="400" stroke="#7A5CFF" stroke-width="1" opacity="0.2"/>
+  <line x1="1050" y1="200" x2="1050" y2="400" stroke="#00F0FF" stroke-width="1" opacity="0.2"/>
+</svg>

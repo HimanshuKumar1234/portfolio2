@@ -1,0 +1,668 @@
+/* ============================================
+   CONTACT SECTION — GIT TERMINAL THEME
+   ============================================ */
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--section-padding);
+    overflow: hidden;
+}
+
+/* ---- Background Orbs ---- */
+.contact-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+    animation: contactOrbFloat 16s ease-in-out infinite;
+}
+
+.contact-orb-1 {
+    width: 380px;
+    height: 380px;
+    background: var(--accent-cyan);
+    top: 10%;
+    left: -8%;
+}
+
+.contact-orb-2 {
+    width: 300px;
+    height: 300px;
+    background: var(--accent-purple);
+    bottom: 10%;
+    right: -6%;
+    animation-delay: -8s;
+}
+
+@keyframes contactOrbFloat {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(25px, -20px) scale(1.05);
+    }
+}
+
+/* ---- Particles ---- */
+.contact-particles {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    opacity: 0;
+    animation: particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+    0% {
+        opacity: 0;
+        transform: translateY(100vh) scale(0);
+    }
+
+    10% {
+        opacity: 0.5;
+    }
+
+    90% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20vh) scale(1);
+    }
+}
+
+/* ---- Fade at bottom ---- */
+.contact::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    background: linear-gradient(to bottom, transparent, #000);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ---- Inner wrapper ---- */
+.contact-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1100px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contact-inner.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---- Header ---- */
+.contact-header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.contact-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-wide);
+    color: var(--accent-cyan);
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.contact-heading {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: var(--letter-tight);
+}
+
+.contact-heading-accent {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ---- Grid Layout ---- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* ============================================
+   TERMINAL
+   ============================================ */
+.contact-terminal {
+    background: rgba(17, 17, 17, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    overflow: hidden;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.7s ease 0.2s, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
+}
+
+.contact-terminal.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Terminal header bar */
+.term-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.term-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.term-dot--red {
+    background: #ff5f57;
+}
+
+.term-dot--yellow {
+    background: #ffbd2e;
+}
+
+.term-dot--green {
+    background: #28c840;
+}
+
+.term-title {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-left: 8px;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+/* Terminal body */
+.term-body {
+    padding: 20px;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    font-size: 0.78rem;
+    line-height: 1.8;
+    min-height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle scanline effect for terminal authenticity */
+.term-body::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 240, 255, 0.01) 2px,
+            rgba(0, 240, 255, 0.01) 4px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.term-block {
+    margin-bottom: 12px;
+}
+
+.term-line {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.term-prefix {
+    color: var(--accent-cyan);
+    font-weight: 700;
+    margin-right: 4px;
+    flex-shrink: 0;
+}
+
+.term-cmd {
+    color: var(--text-primary);
+}
+
+.term-cursor {
+    color: var(--accent-cyan);
+    animation: termBlink 0.8s step-end infinite;
+    margin-left: 1px;
+}
+
+@keyframes termBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.term-output {
+    padding-left: 24px;
+    margin-top: 4px;
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    white-space: pre-line;
+    animation: termFadeIn 0.4s ease;
+}
+
+@keyframes termFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.term-success {
+    color: #28c840;
+}
+
+.term-info {
+    color: var(--accent-cyan);
+}
+
+.term-highlight {
+    color: var(--accent-purple);
+    font-weight: 600;
+}
+
+/* ============================================
+   CONTACT FORM
+   ============================================ */
+.contact-form {
+    background: rgba(17, 17, 17, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    overflow: hidden;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.7s ease 0.4s, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.4s;
+}
+
+.contact-form.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Form header (terminal style) */
+.form-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-header-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.form-header-dot--red {
+    background: #ff5f57;
+}
+
+.form-header-dot--yellow {
+    background: #ffbd2e;
+}
+
+.form-header-dot--green {
+    background: #28c840;
+}
+
+.form-header-title {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-left: 8px;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+/* Form body */
+.form-body {
+    padding: 24px;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-label-prefix {
+    color: var(--accent-cyan);
+    font-weight: 700;
+    margin-right: 6px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    font-size: 0.88rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: var(--text-muted);
+}
+
+.form-input:focus {
+    border-color: rgba(0, 240, 255, 0.35);
+    box-shadow:
+        0 0 24px rgba(0, 240, 255, 0.08),
+        0 0 0 3px rgba(0, 240, 255, 0.04);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: var(--font-primary);
+    line-height: 1.5;
+}
+
+/* Submit button */
+.form-submit {
+    width: 100%;
+    padding: 14px 24px;
+    margin-top: 4px;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--bg-primary);
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.form-submit:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow:
+        0 10px 30px rgba(0, 240, 255, 0.25),
+        0 0 50px rgba(0, 240, 255, 0.1);
+}
+
+.form-submit:active {
+    transform: translateY(0);
+}
+
+.form-submit:disabled {
+    opacity: 0.8;
+    cursor: default;
+}
+
+.form-submit-icon {
+    font-size: 1rem;
+}
+
+/* Loading spinner */
+.form-submit-spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(10, 10, 10, 0.3);
+    border-top-color: var(--bg-primary);
+    border-radius: 50%;
+    animation: formSpin 0.6s linear infinite;
+}
+
+@keyframes formSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Status messages */
+.form-status {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    font-size: 0.72rem;
+    margin-bottom: 14px;
+    animation: termFadeIn 0.4s ease;
+}
+
+.form-status--success {
+    background: rgba(40, 200, 64, 0.08);
+    border: 1px solid rgba(40, 200, 64, 0.2);
+    color: #28c840;
+}
+
+.form-status--error {
+    background: rgba(255, 95, 87, 0.08);
+    border: 1px solid rgba(255, 95, 87, 0.2);
+    color: #ff5f57;
+}
+
+/* Disabled inputs */
+.form-input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ============================================
+   SOCIAL LINKS
+   ============================================ */
+.contact-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.contact-social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.contact-socials.visible .contact-social {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-social:hover {
+    color: var(--accent-cyan);
+    border-color: rgba(0, 240, 255, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 240, 255, 0.1);
+}
+
+/* Cascade stagger for social links */
+.contact-socials.visible .contact-social:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.contact-socials.visible .contact-social:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.contact-socials.visible .contact-social:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.contact-socials.visible .contact-social:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.contact-socials.visible .contact-social:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.contact-social-icon {
+    display: flex;
+    align-items: center;
+    color: var(--accent-cyan);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.contact-social:hover .contact-social-icon {
+    opacity: 1;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.contact-footer {
+    position: relative;
+    z-index: 2;
+    margin-top: 64px;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.footer-code {
+    color: var(--accent-cyan);
+    opacity: 0.5;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+    .contact {
+        padding: var(--section-padding-mobile);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .contact-terminal,
+    .contact-form {
+        transform: translateY(20px);
+    }
+
+    .contact-terminal.visible,
+    .contact-form.visible {
+        transform: translateY(0);
+    }
+
+    .term-body {
+        padding: 16px;
+        font-size: 0.7rem;
+        min-height: auto;
+    }
+
+    .contact-heading {
+        font-size: clamp(1.6rem, 5vw, 2.5rem);
+    }
+
+    .contact-socials {
+        justify-content: center;
+    }
+
+    .contact-orb-1 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .contact-orb-2 {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-body {
+        padding: 16px;
+    }
+
+    .form-input {
+        padding: 10px 12px;
+        font-size: 0.82rem;
+    }
+
+    .contact-social {
+        padding: 8px 14px;
+        font-size: 0.68rem;
+    }
+
+    .form-submit {
+        font-size: 0.7rem;
+        padding: 12px 16px;
+    }
+}

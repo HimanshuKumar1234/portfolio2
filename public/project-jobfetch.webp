@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1a"/>
+      <stop offset="100%" style="stop-color:#0f1923"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg3)"/>
+  <!-- Job cards -->
+  <rect x="60" y="80" width="700" height="120" rx="12" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <rect x="80" y="100" width="200" height="14" rx="4" fill="#e2e8f0" opacity="0.15"/>
+  <rect x="80" y="125" width="300" height="10" rx="4" fill="#94a3b8" opacity="0.1"/>
+  <rect x="80" y="150" width="80" height="24" rx="12" fill="#00F0FF" opacity="0.1"/>
+  <rect x="170" y="150" width="80" height="24" rx="12" fill="#7A5CFF" opacity="0.1"/>
+  <rect x="60" y="220" width="700" height="120" rx="12" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <rect x="80" y="240" width="250" height="14" rx="4" fill="#e2e8f0" opacity="0.15"/>
+  <rect x="80" y="265" width="350" height="10" rx="4" fill="#94a3b8" opacity="0.1"/>
+  <rect x="80" y="290" width="90" height="24" rx="12" fill="#00F0FF" opacity="0.1"/>
+  <rect x="180" y="290" width="70" height="24" rx="12" fill="#7A5CFF" opacity="0.1"/>
+  <rect x="60" y="360" width="700" height="120" rx="12" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <rect x="80" y="380" width="180" height="14" rx="4" fill="#e2e8f0" opacity="0.15"/>
+  <rect x="80" y="405" width="280" height="10" rx="4" fill="#94a3b8" opacity="0.1"/>
+  <rect x="60" y="500" width="700" height="120" rx="12" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <!-- Sidebar stats -->
+  <rect x="820" y="80" width="320" height="250" rx="12" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <rect x="850" y="110" width="120" height="10" rx="4" fill="#00F0FF" opacity="0.2"/>
+  <rect x="850" y="140" width="260" height="40" rx="8" fill="#0f172a"/>
+  <rect x="850" y="200" width="260" height="40" rx="8" fill="#0f172a"/>
+  <rect x="850" y="260" width="260" height="40" rx="8" fill="#0f172a"/>
+  <rect x="820" y="360" width="320" height="180" rx="12" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="980" cy="450" r="50" fill="none" stroke="#00F0FF" stroke-width="4" opacity="0.3"/>
+  <circle cx="980" cy="450" r="50" fill="none" stroke="#7A5CFF" stroke-width="4" opacity="0.5" stroke-dasharray="120 200" transform="rotate(-90 980 450)"/>
+</svg>
