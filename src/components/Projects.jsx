@@ -10,7 +10,7 @@ const PROJECTS = [
         tech: ['React.js', 'Clerk', 'Node.Js', 'Neon DB', 'Cloudinary', 'Vercel'],
         hoverImage: '/project-visioncraft-front.webp',
         frontImage: '/project-visioncraft-hover.webp',
-        live: 'https://vision-craft-client.vercel.app/ai/generate-images',
+        live: 'https://vision-craft-client.vercel.app',
         github: 'https://github.com/HimanshuKumar1234/VisionCraft',
     },
     {
